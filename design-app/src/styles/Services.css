@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Mukta+Mahee:wght@200&display=swap");
+
+body {
+  background: #fff;
+  font-family: "Mukta Mahee", arial, sans-serif;
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #6c757d;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  color: #000;
+  font-family: "Abril Fatface", times, serif;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit;
+}
+
+.h3,
+h3 {
+  font-size: 1.75rem;
+}
+
+.services {
+  padding: 3rem 0;
+  background: #e1fae692;
+  color: #333;
+}
+
+.container_Services {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+  opacity: 0; 
+  transform: translateY(20px); 
+  transition: opacity 2s ease-out, transform 2s ease-out; 
+}
+
+.page-visible .container_Services {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h2 {
+  font-family: "Georgia", cursive;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.services-description {
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #555;
+  margin-left: 120px;
+  margin-right: 120px;
+}
+
+.service-list {
+  display: flex;
+  flex-wrap: wrap; 
+  gap: 0.8rem;
+  justify-content: center;
+}
+
+.service-item {
+  background: #e1fae600;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(247, 245, 245, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 300px; 
+  max-width: 300px; 
+  border-radius: 10%;
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #8df1ce;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.service-item:hover .service-icon {
+  color: #ff6347; 
+  transform: scale(1.2); 
+}
+
+h3 {
+  font-family: "Georgia", sans-serif;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .service-list {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
