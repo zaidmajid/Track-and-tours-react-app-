@@ -1,0 +1,192 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Mukta+Mahee:wght@200&display=swap');
+/* General section styles */
+.contact__section {
+    padding: 0;
+    margin: 0;
+}
+
+/* Header styles */
+.contact__header {
+    position: relative;
+    height: 80vh;
+    background: url('/images/about_image.jpg') no-repeat center center/cover;
+    color: white;
+    overflow: hidden;
+    perspective: 1000px;
+}
+
+.contact__headerOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact__logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.contact__menuIcon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2rem;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.contact__headerTitle {
+    font-size: 3rem;
+    margin-top: 0;
+    text-align: center;
+}
+
+.contact__headerSubtitle {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+}
+
+/* Container styles */
+.contact__container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+}
+
+/* Form styles */
+.contact__formContainer {
+    flex: 2;
+    margin-right: 2rem;
+    padding: 20px;
+}
+
+.contact__form {
+    padding: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact__form h2 {
+    font-family: 'Abril Fatface', serif;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333333;
+}
+
+.contact__formGroup {
+    margin-bottom: 1.5rem;
+}
+
+.contact__formGroupInline {
+    display: flex;
+    gap: 20px;  
+}
+
+.contact__formGroupItem {
+    flex: 1;
+}
+
+.contact__formGroupItem label {
+    display: block;
+    font-family: 'Mukta Mahee', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #333333;
+}
+
+.contact__formGroupItem input,
+.contact__formGroupItem textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+.contact__formGroupItem textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.contact__form button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #65c0ba;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact__form button:hover {
+    background-color: #4a9b8e;
+}
+
+/* Details styles */
+.contact__details {
+    flex: 1;
+    padding: 20px;
+}
+
+.contact__detailsContainer {
+    padding: 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 1.2em;
+}
+
+.contact__detailsContainer h2 {
+    font-family: 'Abril Fatface', serif;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333333;
+}
+
+.contact__detailsContainer p {
+    font-family: 'Mukta Mahee', sans-serif;
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+.contact__detailsHeading {
+    font-weight: bold;
+    color: #65c0ba;
+    font-size: larger;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contact__container {
+        flex-direction: column;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .contact__formContainer {
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+}
+

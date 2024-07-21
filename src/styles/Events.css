@@ -1,0 +1,183 @@
+/* Main section styles */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Mukta+Mahee:wght@200&display=swap');
+.events {
+    padding: 2rem 0;
+    background: linear-gradient(135deg, #ffffff 25%, #ffffff 75%);
+    text-align: center;
+    position: relative;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.events.visible {
+    opacity: 1;
+}
+
+/* Background pattern */
+.events::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+    opacity: 0.3;
+    z-index: -1;
+}
+
+.container-events {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    
+    position: relative;
+    overflow: hidden;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Decorative background */
+.container-events::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 120%;
+    height: 120%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0) 30%, rgba(255, 99, 71, 0.2) 70%);
+    z-index: -1;
+    border-radius: 0.5rem;
+}
+
+.events-heading {
+    font-family: 'Abril Fatface', times, serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+    position: relative;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.events-heading::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+   
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    border-radius: 2px;
+}
+
+.events-description {
+    margin: 0 auto;
+    font-family: 'Mukta Mahee', arial, sans-serif;
+    max-width: 800px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.image-slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 700px;
+    max-height: 350px;
+    margin: 20px auto 2rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    transition: transform 0.3s ease, opacity 0.5s ease;
+    animation: slideIn 2s ease;
+}
+
+.event-image:hover {
+    transform: scale(1.05);
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .image-slider {
+        max-width: 100%;
+    }
+
+    .prev, .next {
+        font-size: 1.2rem;
+    }
+}
+
+/* Keyframe animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* Navigation dots */
+.nav-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.nav-dot {
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-dot.active {
+    background-color: rgba(0, 0, 0, 0.9);
+}

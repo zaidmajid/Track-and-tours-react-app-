@@ -1,0 +1,123 @@
+/* UniqueNavbar.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Mukta+Mahee:wght@200&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+.unique-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-in-out, transform 0s ease-in-out;
+    opacity: 0;
+    z-index: 3;
+    transform: translateY(-100%);
+}
+
+.unique-nav.open {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.unique-nav-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.unique-nav-links li {
+    margin: 10px 0;
+    perspective: 500px;
+}
+
+.unique-nav-link {
+    background: none;
+    border: none;
+    font-family: 'Abril Fatface', serif; 
+    color: black;
+    text-decoration:solid;
+    font-size: 30px; 
+    transition: color 0.3s;
+    cursor: pointer;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.unique-nav-link:hover {
+    color: #65c0ba;
+    transform: translateZ(10px);
+}
+
+.unique-menu-icon {
+    font-size: 2rem;
+    cursor: pointer;
+    animation: fadeIn 3.5s ease forwards;
+    transform: rotateY(20deg);
+}
+
+.unique-menu-icon.open {
+    color: black;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 4;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .unique-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: white;
+        padding: 20px;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .unique-nav.open {
+        display: flex;
+    }
+
+    .unique-nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .unique-nav-links li {
+        margin: 10px 0;
+    }
+
+    .unique-menu-icon.open {
+        color: black;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 4;
+    }
+}
